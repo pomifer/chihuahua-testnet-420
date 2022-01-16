@@ -91,6 +91,37 @@ chihuahuad keys add <key-name>
 chihuahuad keys add <key-name> --recover
 ```
 
+## Create a service
+This will restart the process in case of process crash or server restart.
+
+Create a `/etc/systemd/system/chihuahuad.service` file as `root` with: 
+```
+[Unit]
+Description=Chihuahua Node
+After=network-online.target
+
+[Service]
+User=<your-user>
+ExecStart=/home/<your-user>/go/bin/chihuahuad start
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
+```
+Note: replace the 2 `<your-user>` with your user/path and remove the `User=` line in case of `root`
+```
+# Enable on server restart 
+sudo systemctl enable chihuahuad
+
+# Start the service
+sudo systemctl start chihuahuad
+
+# Show logs
+sudo journalctl -u chihuahuad.service -f
+```
+
 ## Instructions for post-genesis validators
 
 ### Create the validator
