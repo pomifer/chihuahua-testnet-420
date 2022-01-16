@@ -4,7 +4,7 @@ Angry Andy upgrade [Proposal Number #3](https://www.mintscan.io/chihuahua/propos
 
 ![Angry Andy](https://github.com/ChihuahuaChain/mainnet/blob/main/UPGRADES/angryandy/angryandy.jpg?raw=true)
 
-The Upgrade is scheduled for BLOCK `535000`, should be around _16:00 UTC on January 18, 2022_.
+The Upgrade is scheduled for BLOCK `535000`, should be around _16:00 UTC on January 19, 2022_.
 
 Time is only an estimate and can vary by -/+3 hours, check on the #priv-validators channel on our Discord or check the [upgrade monitor](https://chain-monitor.cros-nest.com/d/Upgrades/upgrades?orgId=1&refresh=1m&var-chain_id=chihuahua-1&var-version=angryandy)
 
