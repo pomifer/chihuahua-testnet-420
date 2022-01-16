@@ -1,16 +1,16 @@
 # Angry Andy UPGRADE (v1.1.1)
 
-![Angry Andy](https://github.com/ChihuahuaChain/mainnet/UPGRADES/angryandy/blob/angryandy/angryandy.jpg?raw=true)
-
-
 Angry Andy upgrade [Proposal Number #3](https://www.mintscan.io/chihuahua/proposals/3)
 
+![Angry Andy](https://github.com/ChihuahuaChain/mainnet/blob/main/UPGRADES/angryandy/angryandy.jpg?raw=true)
 
 The Upgrade is scheduled for BLOCK `535000`, should be around _16:00 UTC on January 18, 2022_.
 
 Time is only an estimate and can vary by -/+3 hours, check on the #priv-validators channel on our Discord or check the [upgrade monitor](https://chain-monitor.cros-nest.com/d/Upgrades/upgrades?orgId=1&refresh=1m&var-chain_id=chihuahua-1&var-version=angryandy)
 
 # Using Cosmovisor
+
+If you are using cosmovisor you don't have to wait for the upgrade block, instead it's advisable to prepare the upgrade before the block 535000 and it will be automatically upgraded.
 
 ```bash
 # download the new version
@@ -46,6 +46,8 @@ make install
 
 # check the version - should be v1.1.1
 chihuahuad version
+```
+
 
 Wait for the upgrade block height 535000 and wait for your node to gracefully stop, take some time to backup your data directory then start the node again.
 
