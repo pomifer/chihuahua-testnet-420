@@ -19,8 +19,8 @@ Follow the instructions [here](https://golang.org/doc/install) to install Go.
 
 Alternatively, for Ubuntu LTS, you can do:
 ```bash:
-wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.17.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
 ```
 
 Unless you want to configure in a non standard way, then set these in the `.profile` in the user's home (i.e. `~/`) folder.
@@ -42,6 +42,8 @@ Output should be: `go version go1.17.5 linux/amd64`
 ```bash:
 git clone https://github.com/ChihuahuaChain/chihuahua.git
 cd chihuahua
+git fetch --tags
+git checkout v1.1.1
 make install
 ```
 Note: there is no tag to build off of, just use master for now
