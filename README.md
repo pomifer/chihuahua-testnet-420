@@ -1,4 +1,4 @@
-# MAINNET: CHIHUAHUA-1
+# MAINNET: chihuahua-testnet-420
 
 ## Installation Steps
 
@@ -50,7 +50,7 @@ Note: there is no tag to build off of, just use master for now
 
 ### Init chain
 ```bash:
-chihuahuad init $MONIKER_NAME --chain-id chihuahua-1
+chihuahuad init $MONIKER_NAME --chain-id chihuahua-testnet-420
 ```
 
 ### Download Genesis
@@ -69,25 +69,6 @@ sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persi
 ```bash:
 minimum-gas-prices = 0.025uhuahua
 ```
-
-### Customize Pruning and Indexing (Optional)
-Due to the high number of transactions on the chain in order to save some hard disk space you might want to tweak pruning and indexing as follows
-- Replace 'kv' to 'null' on ~/.chihuahua/config.toml
-
-```indexer = "null"```
-
-- Set pruning as follows on ~/.chihuahua/app.toml
-
-```
-pruning = "custom"
-
-# These are applied if and only if the pruning strategy is custom.
-pruning-keep-recent = "5000"
-pruning-keep-every = "0"
-pruning-interval = "10"
-```
-
-NOTE: If your node was already active before pruning tweaks you will need to resync from scratch again, if you only turned off the indexing you can simply restart your node and erase ~/.chihuahua/data/tx_index.db folder.
 
 ### Add/recover keys
 ```bash:
@@ -142,7 +123,7 @@ chihuahuad tx staking create-validator \
   --from "<key-name>" \
   --amount "10000000uhuahua" \
   --pubkey "$(chihuahuad tendermint show-validator)" \
-  --chain-id "chihuahua-1" \
+  --chain-id "chihuahua-testnet-420" \
   --moniker "<moniker>" \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
@@ -153,44 +134,6 @@ chihuahuad tx staking create-validator \
   --website "<website>" \
   --gas-prices "0.025uhuahua"
 ```
-
-### Backup critical files
-```bash:
-priv_validator_key.json
-```
-
-
-## [OUTDATED] - Instructions for Genesis Validators
-
-### GenTx Creation
-
-### Create Gentx
-
-#### Add genesis account:
-```
-chihuahuad add-genesis-account <key-name> 5000001000000uhuahua
-```
-Note: if you receive message: `failed to get address from Keybase:`, add `--keyring-backend os`
-
-#### Create Gentx
-```
-chihuahuad gentx <key-name> 5000000000000uhuahua \
---chain-id chihuahua-1 \
---moniker="<moniker>" \
---commission-max-change-rate=0.01 \
---commission-max-rate=0.20 \
---commission-rate=0.05 \
---details="XXXXXXXX" \
---security-contact="XXXXXXXX" \
---website="XXXXXXXX"
-```
-
-### Submit PR with Gentx and peer id
-1. Copy the contents of ${HOME}/.chihuahua/config/gentx/gentx-XXXXXXXX.json.
-2. Fork the repository
-3. Create a file gentx-{{VALIDATOR_NAME}}.json under the /gentxs folder in the forked repo, paste the copied text into the file.
-4. Create a Pull Request to the main branch of the repository
-
 
 ### Backup critical files
 ```bash:
