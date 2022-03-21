@@ -58,7 +58,7 @@ chihuahuad init $MONIKER_NAME --chain-id chihuahua-testnet-420
 
 ### Download Genesis
 ```bash:
-wget -O ~/.chihuahua/config/genesis.json https://raw.githubusercontent.com/ChihuahuaChain/mainnet/main/genesis.json
+wget -O ~/.chihuahua/config/genesis.json https://raw.githubusercontent.com/pomifer/chihuahua-testnet-420/main/genesis.json
 ```
 
 ### Add Seeds & Persistent Peers
