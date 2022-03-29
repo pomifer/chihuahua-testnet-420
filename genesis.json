@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2022-03-21T04:09:48.399238305Z",
-  "chain_id": "chihuahua-testnet-420",
+  "genesis_time": "2022-03-29T01:44:29.822366447Z",
+  "chain_id": "chihuahua-testnet-421",
   "initial_height": "1",
   "consensus_params": {
     "block": {
@@ -33,7 +33,7 @@
       "accounts": [
         {
           "@type": "/cosmos.auth.v1beta1.BaseAccount",
-          "address": "chihuahua1xnva6nspppkfavj09cv6l674amm7t5z9hupfcu",
+          "address": "chihuahua1qdpdmmdkn9t0aaezx3akze0k78jftxgjvw3f2j",
           "pub_key": null,
           "account_number": "0",
           "sequence": "0"
@@ -47,11 +47,11 @@
       },
       "balances": [
         {
-          "address": "chihuahua1xnva6nspppkfavj09cv6l674amm7t5z9hupfcu",
+          "address": "chihuahua1qdpdmmdkn9t0aaezx3akze0k78jftxgjvw3f2j",
           "coins": [
             {
               "denom": "stake",
-              "amount": "1000000000000000000000"
+              "amount": "1000000000000000000000000000"
             }
           ]
         }
@@ -102,31 +102,31 @@
               {
                 "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
                 "description": {
-                  "moniker": "chihuahua-testnet-420",
+                  "moniker": "chihuahua-testnet-421",
                   "identity": "",
                   "website": "",
                   "security_contact": "",
                   "details": ""
                 },
                 "commission": {
-                  "rate": "0.100000000000000000",
+                  "rate": "0.010000000000000000",
                   "max_rate": "0.200000000000000000",
                   "max_change_rate": "0.010000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "chihuahua1xnva6nspppkfavj09cv6l674amm7t5z9hupfcu",
-                "validator_address": "chihuahuavaloper1xnva6nspppkfavj09cv6l674amm7t5z9ytp5tq",
+                "delegator_address": "chihuahua1qdpdmmdkn9t0aaezx3akze0k78jftxgjvw3f2j",
+                "validator_address": "chihuahuavaloper1qdpdmmdkn9t0aaezx3akze0k78jftxgjle35ew",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "AbSw6496g1mN8fbvrCpMPjCB6szdfJUKyD0Ss9uh434="
+                  "key": "UQrvqvD0Aq+vavs7Ze6E7nGN54VQ1AL6UXMSMgvGb7c="
                 },
                 "value": {
                   "denom": "stake",
-                  "amount": "5000000000000000"
+                  "amount": "5000000000"
                 }
               }
             ],
-            "memo": "6191b0c4be193a147e5c597c7c2f8fb5ede9355f@128.199.38.46:26656",
+            "memo": "8b296c59f919ab9e269b264e227fb15de91b5840@164.92.147.131:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -136,7 +136,7 @@
               {
                 "public_key": {
                   "@type": "/cosmos.crypto.secp256k1.PubKey",
-                  "key": "AuHoPVxkWX9N8+PO0sWGLvtOJnFexOYBA2lWdT6cIBgk"
+                  "key": "A6N/hyZSMM5HZzNh0NqD/5YPTnhHmsR/3gyahilIcljr"
                 },
                 "mode_info": {
                   "single": {
@@ -154,7 +154,7 @@
             }
           },
           "signatures": [
-            "ycWDdwK7rJo+5V3qISnBU2RsYkWZhkefKAiGyur2dlwfLr26Qdmrd8Xn2faSOyhUuBY4Pl1JeL9Z/096niwqxw=="
+            "9WMUXsENqbZ47s89yo2KxJn+k/JVU37L8nzcHMyjPr5uiR0ZmJPPj4NWyvWO2WA9fjiWf7UIs2hFXG/aXML0XQ=="
           ]
         }
       ]
@@ -171,10 +171,10 @@
             "amount": "10000000"
           }
         ],
-        "max_deposit_period": "60s"
+        "max_deposit_period": "1s"
       },
       "voting_params": {
-        "voting_period": "600s"
+        "voting_period": "30s"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
@@ -244,7 +244,7 @@
     "staking": {
       "params": {
         "unbonding_time": "1814400s",
-        "max_validators": 150,
+        "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 10000,
         "bond_denom": "stake",
