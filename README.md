@@ -1,6 +1,6 @@
 # chihuahua-testnet-420
 
-This is a testnet for chihuahua that will start on v1.1.1 and then upgrade to v2.0.0-rc-1.
+This is a testnet for chihuahua that will start on v1.1.1 and then upgrade to v2.0.0-rc-2.
 
 
 ## Installation Steps
